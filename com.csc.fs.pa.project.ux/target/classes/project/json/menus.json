@@ -1,0 +1,10 @@
+{"menu":[{
+	"id":"project",
+	"label" : "PROJECT",
+	"url": "/project",
+	"templateUrl":"common/search.html",
+	"icon" : "fa fa-calculator",
+	"sref":"project",
+	"artifactType":"project",
+	"order":"e"
+} ]}

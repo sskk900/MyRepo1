@@ -1,0 +1,24 @@
+<div  ng-controller="projectController" ng-init='loadTreeData(projectId);loadInitData(2)'>
+<div ng-include="'common/Header.html'"></div><!-- HeaderActions -->
+<div class="page-header">
+			<span ng-repeat="header in metadataList.header">
+				<div class="ux_page_title">
+					<span class="{{header.icon}}"></span>
+					<span class="ux_page_title_label">&nbsp;{{header.label}}</span>
+				</div>
+			</span>
+</div>
+<div class = "col-md-12 margin_Top">
+	
+	<div  class = "col-md-3 sectionBorder"><!-- Tree Section -->
+	<div id = "treeView">
+	<input type="text" class="form-control input-sm" placeholder="Type Filter Text" ng-model="predicate"><br><!-- Tree Filter -->
+	<treecontrol class="tree-light" tree-model="dataForTheTree" on-selection="nodeSelected(node)" options="treeOptions" filter-expression="predicate" >
+  		{{node.label}}
+	</treecontrol>
+	</div>
+	</div>
+	
+</div>
+
+	

@@ -1,0 +1,26 @@
+
+<div class="modal fade">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header"><h4 class="modal-title modalT">Add Child Object</h4></div>
+       <div class="modal-body">
+        <form class="form-horizontal" role="form">
+		<div  ng-show="showNoObjMsg" style="padding: 19px; margin-top: -3%">
+		<div><b>Select Child Object To Add: </b></div>
+		<div><select ng-options="element.label for element in addObjectList " size="6" style="width: 100%;margin-bottom: -4%;" ng-model="valueSelect"  ng-change="getSelectedObject(valueSelect)">
+			 <option value="" ng-if="false"></option></select>
+		</div>
+ 		</div>
+		<div  ng-hide="showNoObjMsg" style="height: 25%;min-height: 20px;padding: 19px;margin-bottom: 20px;background-color: #f5f5f5; border: 1px solid #e3e3e3;border-radius: 4px;">
+		<label style="margin-left: 20% "><b>No Child Business Object Is Available To Add.</b></label>
+		</div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" ng-click="closeDialog()" class="buttonMargin  ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ux_page_button ui-state-hover ui-button-text ui-c" data-dismiss="modal" ng-disabled="disableOKAdd">OK</button>
+        <button type="button" ng-click="cancel()" class="buttonMargin  ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ux_page_button ui-state-hover ui-button-text ui-c">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
